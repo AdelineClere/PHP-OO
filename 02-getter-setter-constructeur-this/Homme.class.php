@@ -33,16 +33,16 @@ echo 'Bonjour ' . $homme -> getPrenom() . '!';
 /*****************⚠️ COMMENTAIRES ⚠️*******************
 
     Pourquoi faire des GETTER et SETTER ?
-        - Le php est un langage qui type pas ses variables (> dc tjrs vérif si string, integer etc..)
-          > dc mettre une visibilité private aux propriétés et créer les setters pour vérif l'intégralité des données EST UNE BONNE CONRTAINTE
+        - Le php est un langage qui ne type pas ses variables (> dc tjrs vérif si string, integer etc..)
+          > ⚠️ dc mettre une visibilité PRIVATE aux propriétés et créer les SETTERS pour vérif l'intégralité des données EST UNE BONNE CONTRAINTE
         - Tout dev' qui voudra affecter une valeur devra OBLIGATOIREMENT passer par le setter
 
-    SETTER  :   Affecter une valeur
-    GETTER  :   Récupérer une valeur        (!! ds un getter jamais d'argument )
+    ⚠️ SETTER  :   Affecter une valeur
+    ⚠️ GETTER  :   Récupérer une valeur        (!! ds un getter JAMAIS d'argument )
 
-    Nous aurons autant de setter et de getter que de propriétés private.
+    ⚠️ Nous aurons autant de setter et de getter que de propriétés private.
 
-    $this   :   Représente l'objet en cours de manipulation
+    ⚠️ $this   :   Représente l'objet en cours de manipulation
 
 ( intérêt : trv de manière collaborative, gère protection, code factorisé (encapsuler code pr ête plus simple, + lisible) dans des classes en objet le + possible )
 

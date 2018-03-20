@@ -5,8 +5,7 @@ class Etudiant
     private $prenom;
 
     public function __construct($arg){
-
-        // la fct contruct() (méthode magique) se lance au moment de l'instantciation...
+        // ⚠️ la fct contruct() (méthode magique) se lance au moment de l'instantciation...
         // $this -> prenom = $arg;  (presq bon)
         $this -> setPrenom($arg);
     }
@@ -24,4 +23,10 @@ class Etudiant
 
 $etudiant = new etudiant('Adeline');
 echo 'Prenom : ' . $etudiant -> getPrenom();
-// En modifiant UNIQUEMENT l'intérieur de la classe, affecter la valeur Adeline à la propriété 'prénom' > cf. lg 7 > 12
+// En modifiant UNIQUEMENT l'intérieur de la classe, ⚠️ affecter la valeur Adeline à la propriété 'prénom' > cf. lg 7 > 12
+
+
+// sans fct __construct :
+echo'<br>';
+$etudiant -> setPrenom ('Adeline');    
+echo 'Prenom : ' . $etudiant -> getPrenom();
