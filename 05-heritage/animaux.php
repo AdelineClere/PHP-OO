@@ -48,9 +48,11 @@ echo $chat -> quiSuisJe() . '<br>';
  * 
  * L'héritage est l'un des fondements de la programmation orientée objet (ts les langages) ⚠️
  * Lorsqu'une classe hérite d'une autre classe, elle importe tt le code ⚠️ 
- * Les élts st dc appelés $this ⚠️(à l'int de la classe).
+ * Les élts st dc appelés $this ⚠️ (à l'int de la classe).
  * 
- * Redéfinition de fconction ⚠️(vs Surcharge) :
- * Une classe enfant (héritière) peut modifier ENTIERMENT⚠️ le traitement d'une fonction dont elle a hérité. 
+ * Redéfinition de fct ⚠️ (vs Surcharge) :
+ * Une classe enfant (héritière) peut modifier ENTIERMENT ⚠️ le traitement d'une fonction dont elle a hérité. 
  * 
- * L'interprêteur va d'abord regarder si la méthode existe ds la classe qui l'exécute puis dans la classe mère.
+ *  (L'interprêteur va d'abord regarder si la méthode existe ds la classe qui l'exécute puis dans la classe mère.)
+ * 
+ * */

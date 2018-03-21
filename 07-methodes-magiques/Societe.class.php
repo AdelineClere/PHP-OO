@@ -1,7 +1,7 @@
 <?php
 
 
-// Les méthodes magiques st des fct qui s'exécutent automatiquement en fct d'évènements particuliers.
+//⚠️  Les méthodes magiques st des fct qui s'exécutent automatiquement en fct d'évènements particuliers.
 
 class Societe
 {
@@ -37,14 +37,14 @@ echo $societe -> telephone;
 
 
 /*
-    ⚠️AUTRES METHODES MAGIQUES 
+    ⚠️ AUTRES METHODES MAGIQUES 
 
-    - __call($nom, $args) : s'éxécute qd on tente d'appeler une fct qui n'existe pas.
+    - __call($nom, $args) : ⚠️ s'éxécute qd on tente d'appeler une fct qui n'existe pas.
       On récupère en args, le nom de la methode, et les arguments qui avaient été passés.
 
-    - __callStatic($nom, $args) : idem mais pour les methodes static.
+    - __callStatic($nom, $args) : ⚠️ idem mais pour les methodes static.
 
-    - __destruct() : s'exécute à la fin du script.
+    - __destruct() : ⚠️ s'exécute à la fin du script.
         ex : fermer la connexion à la BDD, fermer des fichiers.
 
     - Liste non exhaustive : 

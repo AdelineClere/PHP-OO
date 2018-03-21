@@ -26,13 +26,13 @@ class Bateau implements Mouvement
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
  * 
- *  - Une interface est une liste de méthode (sans coprs) qui permet de garantir que toutes les classes 
+ *  - ⚠️ Une interface est une liste de méthode (sans coprs) qui permet de garantir que toutes les classes 
  *    qui implements l'interface contiendront ttes les méthodes de l'interface, ac LES MÊMES NOMS.
- *    C'est une sorte de LEXIQUE A RESPECTER, contrat passé entre le dév' maître et les autres dév'.
+ *    C'est une sorte de ⚠️ LEXIQUE A RESPECTER, contrat passé entre le dév' maître et les autres dév'.
  * 
- *  - Une interface n'est PAS INSTANCIABLE;
+ *  - ⚠️ Une interface n'est PAS INSTANCIABLE;
  *  - Bateau et Avion peuvent par ex. hériter d'une classe Vehicule et implémenter l'interface Mouvement.
  *    Les mvts st des pts communs que Bateau et Avion partagent.
- *  - On peut hériter d'une classe et implémenter une interface en même temps :⚠️class A extends B implement C
- *  - Les METHODES d'une interface sont FORCEMENT PUBLIC sinon elles ne pourraient pas être redéfinies.
+ *  - On peut hériter d'une classe et implémenter une interface en même temps :⚠️ class A extends B implement C
+ *  - Les METHODES d'une interface sont ⚠️ FORCEMENT PUBLIC sinon elles ne pourraient pas être redéfinies !
  */

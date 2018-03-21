@@ -44,3 +44,4 @@ class Extension extends Application2
 
     - Une méthode finale PEUT Ê présente ds une classe normale
     - Une méthode finale ne peut PAS Ê SURCHARGEE NI REDEFINIE
+*/

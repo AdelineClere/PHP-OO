@@ -38,5 +38,7 @@ echo $admin -> accesBackOffice() . '<br/>';
  *  Ds notre site, un admin c'est un membre ac une focntionnalité suppl. : Accès au BackOffice.
  *  ⚠️ Dc naturel que la class admin hérite (extends) de la classe Membre et qu'on ne réécrive pas tt le code 2 fois.
  * 
- *  Rq : si fct est private : on hérite, eccessible, droit d'utiliser, mais "existe" pas ds domaine public..
+ * 
+ * 
+ *  Rq : si une fct est private : on hérite, accessible, droit d'utiliser, mais "existe" pas ds domaine public..
  */

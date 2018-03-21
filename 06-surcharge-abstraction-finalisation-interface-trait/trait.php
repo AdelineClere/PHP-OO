@@ -23,7 +23,7 @@ trait TMembre
 class Site
 {
     use TPanier, TMembre;
-    // on importe tout le code contenu ds les traits TPanier et TMembre
+    //⚠️ on importe tout le code contenu ds les traits TPanier et TMembre
 }
 
 //
@@ -36,10 +36,10 @@ echo $site -> affichageMembre() . '<br>';
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
  * 
- *  - Les traits ont été inventés pour REPOUSSER L4HERITAGE NON MULTIPLE du PHP.
+ *  - Les traits ont été inventés pour REPOUSSER L'HERITAGE NON MULTIPLE du PHP.
  *  
- *  - Une classe peut hériter d'une seule classe, mais IMPORTER PLUSIEURS TRAITS.
+ *  - ⚠️ Une classe peut hériter d'une seule classe, mais IMPORTER PLUSIEURS TRAITS.
  * 
- *  - Un trait PEUT IMPORTER un ou des TRAITS.
+ *  - ⚠️ Un trait PEUT IMPORTER un ou des TRAITS.
  * 
  */

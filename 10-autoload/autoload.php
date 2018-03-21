@@ -24,13 +24,14 @@ spl_autoload_register('inclusion_automatique');
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
 
-    spl_autoload_register(); :
-        - Fct super pratique. Rôle = ⚠️s'EXECUTE dès que le serveur voit passer un 'new'️
+   ⚠️  spl_autoload_register(); :
+        - Fct super pratique. Rôle = ⚠️ s'EXECUTE dès que le serveur voit passer un 'new'️
         - Cette fct VA EXECUTER UNE FONCTION... La fct que je lui ai passée en argument
-        - ⚠️VA APPORTER à notre fct le(s) mot(s) qui se trouvent après le mot 'new'
+        - ⚠️ VA APPORTER à notre fct le(s) mot(s) qui se trouvent après le mot 'new'
+
 Concrètement :
-        On lance ça                 :   $a = new A;
-        spl_autoload_register lance :   inclusion_automatique('A');
+        On lance ça                 : ⚠️   $a = new A;
+        spl_autoload_register lance : ⚠️   inclusion_automatique('A');
 
 
 */
