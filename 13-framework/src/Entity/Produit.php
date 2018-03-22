@@ -29,7 +29,7 @@ class Produit
 		$this -> id_produit = $id;
 	}
 	
-	
+
 	/**
 	* reference
 	*

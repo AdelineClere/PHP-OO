@@ -27,7 +27,7 @@ class PDOManager
         require_once __DIR__ . '/../../app/Config.php';
         $config = new Config;
         $connect = $config -> getParametersConnect();
-        // On instancie un objet de la class Config qui a pr mission de nous transmettre les infos de connexion via la fct getParametersConfig()
+        //⚠️️ On instancie un objet de la class Config qui a pr mission de nous transmettre les infos de connexion via la fct getParametersConfig()
 
         return new PDO('mysql:host=' . $connect['host'] . ';dbname=' . $connect['dbname'], $connect['login'], $connect['password'], array(
             PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING,

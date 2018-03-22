@@ -39,20 +39,24 @@ echo '</pre>';
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
  * 
+ * 
  *⚠️ TRANSITIVITÉ :
  *      Si B hérite de A
  *          Et si C hérite de B
  *              Alors C hérite de A (indirectt)
  *   ⚠️ Les méthodes PROTECTED de A sont accessibles ds C même si l'héritage est indirect.
  * 
- *⚠️ L'héritage est :
+ * 
+ *
+ * ⚠️ L'héritage est :
+
  *      - NON RÉFLEXIF : Class D extends D ===> Une classe ne peut pas hériter d'elle-même
  * 
  *      - NON SYMÉTRIQUE : ce n'est pas parcke E extends F que F va extends E
  * 
  *      - SANS CYCLE : Si E extends F, il est impos. que F extends E
  * 
- *      - PAS MULTIPLE : Class N extends, M, P ===> en PHP il n'y a pas d'héritage multiple
+ *      - PAS MULTIPLE : Class N extends, M, P ===> ⚠️ en PHP il n'y a pas d'héritage multiple
  * 
  *  
  *⚠️ Une classe peut avoir un nb infini d'héritiers

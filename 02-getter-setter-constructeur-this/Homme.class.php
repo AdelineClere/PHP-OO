@@ -17,7 +17,7 @@ class Homme
     }
 
     public function getPrenom(){            // on fait un getter pour récup setter
-    return $this -> prenom;                 // ' this ' fait appel à l'objet ds lequel je me trouve
+        return $this -> prenom;                 // ' this ' fait appel à l'objet ds lequel je me trouve
     }
 }
 
@@ -45,10 +45,6 @@ echo 'Bonjour ' . $homme -> getPrenom() . '!';
     ⚠️ $this   :   Représente l'objet en cours de manipulation
 
 ( intérêt : trv de manière collaborative, gère protection, code factorisé (encapsuler code pr ête plus simple, + lisible) dans des classes en objet le + possible )
-
-
-
-
 
 
 
