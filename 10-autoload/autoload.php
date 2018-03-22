@@ -24,7 +24,7 @@ spl_autoload_register('inclusion_automatique');
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
 
-   ⚠️  spl_autoload_register(); :
+⚠️⚠️ spl_autoload_register(); :
         - Fct super pratique. Rôle = ⚠️ s'EXECUTE dès que le serveur voit passer un 'new'️
         - Cette fct VA EXECUTER UNE FONCTION... La fct que je lui ai passée en argument
         - ⚠️ VA APPORTER à notre fct le(s) mot(s) qui se trouvent après le mot 'new'

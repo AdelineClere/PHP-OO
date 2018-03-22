@@ -8,9 +8,10 @@ namespace General;      // ⚠️ ne marche plus si on met un namespace genéral
 use PDO;
 use Espace1;
 use Espace2;
-            // autre méthode : antislash pour sortir des esp : $c = new \Espace1\A;   
+            // autre méthode : antislash pour sortir des esp : $c = new \Espace1\A;   (comme ::/ )
+            // \ => pour namespaces
 
-require('espace1.php');
+require('espace1.php');     // dans l'absolu c'est un copier/coller
 require('espace2.php');
 
 $c = new Espace1\A;         // du coup obligé d'appeler class par/dans son espace virtuel ⚠️ 
