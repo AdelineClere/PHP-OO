@@ -17,8 +17,8 @@ class Autoload
         // dès que rencontre \ => coupe en array ( new / Controller / ProduitController...)
         
             // si je suis ds le cadre d'un Manager ou pas => pas même chemin : VENDOR ou SRC
-            if($tab[0] == 'Manager' || ($tab[0] == 'Model' && $tab[1] == 'Model')) {  
-                                    // ([(0)] ou [1] = 'class' et nom de la class)
+            if($tab[0] == 'Manager' || ($tab[0] == 'Model' && $tab[1] == 'Model') || ($tab[0] == 'Controller' && $tab[1] == 'Controller')) {  
+            // ([(0)] ou [1] = 'class' et nom de la class, car Manager tjrs ds Vendor, et Model ds src et Model général ds vendor)
                 $path = __DIR__ . '/' . implode('/', $tab) . '.php';    // ds 1 cas je reste ds dossier vendor (path = chemin)
                 //ex :  $path = __DIR__ . '/Manager/PDOManager.php'
             }
@@ -29,8 +29,8 @@ class Autoload
             }
 
             //----------
-            echo '<pre>Autoload : ' . $className . '<br>';
-            echo '===> Require(' . $path . ') </pre>';
+                    // echo '<pre>Autoload : ' . $className . '<br>';
+                    // echo '===> Require(' . $path . ') </pre>';
             //----------
 
             require $path; 

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f273c39-de97-4b7e-8db1-86b3e5dd2726" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/04-constante-static-self/singleton.php" afterPath="$PROJECT_DIR$/04-constante-static-self/singleton.php" />
-      <change beforePath="$PROJECT_DIR$/OLD/connexion.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/13-framework/app/Config/parameters.php" afterPath="$PROJECT_DIR$/13-framework/app/Config/parameters.php" />
+      <change beforePath="$PROJECT_DIR$/13-framework/explications.txt" afterPath="$PROJECT_DIR$/13-framework/explications.txt" />
+      <change beforePath="$PROJECT_DIR$/13-framework/vendor/Manager/PDOManager.php" afterPath="$PROJECT_DIR$/13-framework/vendor/Manager/PDOManager.php" />
+      <change beforePath="$PROJECT_DIR$/13-framework/vendor/Model/Model.php" afterPath="$PROJECT_DIR$/13-framework/vendor/Model/Model.php" />
+      <change beforePath="$PROJECT_DIR$/13-framework/vendor/autoload.php" afterPath="$PROJECT_DIR$/13-framework/vendor/autoload.php" />
+      <change beforePath="$PROJECT_DIR$/13-framework/web/index.php" afterPath="$PROJECT_DIR$/13-framework/web/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,12 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="appel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/10-autoload/appel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -44,12 +49,13 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="267" />
-    <option name="width" value="1156" />
+    <option name="x" value="888" />
+    <option name="y" value="1" />
+    <option name="width" value="964" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -62,36 +68,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PHP OO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP OO" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PHP OO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP OO" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="01-classes-objet-instance-visibilite" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PHP OO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP OO" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="07-methodes-magiques" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="PHP OO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP OO" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="10-autoload" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -126,14 +103,16 @@
       <updated>1521562355035</updated>
       <workItem from="1521562358121" duration="120000" />
       <workItem from="1521649352553" duration="129000" />
+      <workItem from="1521798891004" duration="243000" />
+      <workItem from="1521813592288" duration="106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249000" />
+    <option name="totallyTimeSpent" value="598000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="267" y="0" width="1156" height="1047" extended-state="0" />
+    <frame x="888" y="1" width="964" height="1047" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23859648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -188,8 +167,24 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/10-autoload/appel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-autoload/appel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/10-autoload/appel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding />
         </state>
       </provider>

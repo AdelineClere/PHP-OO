@@ -55,24 +55,72 @@ vendor/
                       que les requêtes génériques.
 
 
+src/
+    Model/
+        ProduitModel.php  : ⚠️️Ce fichier contiendra ttes les fct (requetes) liées à l'entité Produit (table produit)                       et 🔸demandera à Model.php (son parent) d'exécuter des requêtes.
+                            Lorsqu'une entité a besoin de 🔸requête(s) spécifiques qui ne peut ê génériq ds Model on la code ici.
+        Ex. : des jointures
+
+
+vendor/
+    Controller/
+        Controller.php  : Ce fichier est le contrôleur de l'appli. Il a 2 missions :
+                            1.⚠️️ Récup le bon model en fct de l'entité dans laq ns sommes (getModel)
+                            2.⚠️️ Afficher la bonne vue en lui transmettant les infos nécess. (render)
+
+src/
+    Controller/
+        ProduitController.php  :  Cette classe ⚠️️hérite du Controller, dc est capable de récup le model 
+                                  correspondant grâce à 🔸getMode() et permet de🔸 déclencher ttes les act° 
+                                  spécifiques à l'entité Produit.
+
+
+    View/
+        Produit/
+            boutique.php    :   Tout le code HTML de la pg Boutique :
+                                    1. retirer ts les traitements PHP
+                                    2. Remettre header.inc.php et de footer.inc.php  
+
+
+web/   
+    ⚠️️Coller ttes les ressources CSS, JS, img, photo, bootstrap...
+
+
+src/
+    View/
+        layout.HTML : ⚠️️ Le layout représente la structure d'une page de notre site (Header/Nav/footer).
+                          Il peut y avoir plusieurs Layout si necess. (par ex. un pr les membres Lambda et un pr les admins...)    
+
+
+web/
+    .htaccess : 
+        1. text.text
+        2. On l'ouvre sur l'éditeur
+        3. Enregistrer sous 'all files' .htaccess
+        ⚠️️Le fichier .htaccess va donner l'ordre à notre serveur que ts les liens renvoients vers index.php.
+           De fait le lien  :🔸www.monsite.com/produit/afficheAll  
+                    donnera :  www.monsite.com/index.php/produit/afficheAll
+                    => on ne quittera jamais le fichier index.php
+
+
+vendor/
+    Manager/
+        Application.php  :  Ce fichier lance notre appli ⚠️️c'est notre interrupteur.
+                            Cette classe a pour mission de récup les données ds l'URL (le controller, 
+                            l'action et l'arg), et d'instancier le bon controller, lancer la bonne méthode 
+                            et y mettre l'argument.
 
 
 
 
 
 
+NAMESPACE (Choix subjectifs)
 
-
-
-
-
-
-⚠️️ NAMESPACE (Choix subjectifs)
-
-- parameters, Config, index, autoload sont ds l'espace GLOBAL = pas dans namespaces :
+⚠️️ ds l'espace GLOBAL  :   🔸parameters 🔸Config 🔸index 🔸autoload = pas dans namespaces :
     -> pas vraiment besoin, car +- immuables
 
-- dans NAMESPACES : PDOManager, Commande, Membre, Produit
+⚠️️ dans NAMESPACES     :   🔸PDOManager 🔸Commande 🔸Membre 🔸Produit
 
 
 

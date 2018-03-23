@@ -37,9 +37,9 @@ class Model
         // puis -> Produit                                (grâce à str_replace)
         // puis -> en min > car table s'app. 'produit'    (grâce à strtolower)
         $table = strtolower(str_replace(array('Model\\', 'Model'), '', get_called_class()));
+        //je remplace Model\ et Model par rien (array just packe plusieurs remplace)
 
-    //  return $table;
-        return 'produit';   //⚠️️ juste pour les tests car model.pdt.php etc pas créés
+        return $table;
 
         /*  ⚠️️ ⚠️️ ⚠️️ Au moment où je ferai appel à cette méthode je serai dans la classe ProduitModel ou 
                     MembreModel ou CommandeModel etc.
@@ -60,12 +60,13 @@ class Model
         // je vais chercher le nom de la table, je le stock ds une var $requete
     // $requete = "SELECT * FROM produit";     (Rq.: // décalé = équivalence)
 
-        $resultat = $this -> getDb() -> query($requete);  //(🔸 getDb, requete ss heritage)
+
+     $resultat = $this -> getDb() -> query($requete);  //(🔸 getDb, requete ss heritage)
     // $resultat = $pdo -> query("SELECT * FROM produit");
 
-        $resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\\' . $this -> getTableName()); 
+         $resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\\' . $this -> getTableName()); 
         // FETCH_CLASS Entity etc   => donnera un tablo multidim (tablo ac des objets deds)
-
+// avt de faire fetch on lui livre la class de maniere instanciée. Car la on veut recup objet qu'on a recup de la class, de bdd
         /*
         ⚠️️ setFetchMode() permet d'instancier un objet (ds notre cas un objet Entity\Produit), en prenant les résultats de notre requête et en affectant les valeurs dans les propriétés de mes objets.
         Pour que cela fcte sans accroc, il faut absolument que les noms des champs dans les tables correspondent aux noms des propriétés ds les objets (POPO)
@@ -88,7 +89,7 @@ class Model
                                 // }
 
         // ac tablo multidim retourné ->
-        $donnees = $resultat -> fetchAll();     // > retourner un array de tous les pdts en OBJETs 
+         $donnees = $resultat -> fetchAll();     // > retourner un array de tous les pdts en OBJETs 
 
         if(!$donnees) {
             return FALSE;

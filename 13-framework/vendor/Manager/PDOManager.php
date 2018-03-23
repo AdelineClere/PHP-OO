@@ -2,7 +2,7 @@
 //vendor/Manager/PDOManager.php
 
 namespace Manager;
-use PDO; // car PDO n'existe pas ds mon PDOManager dc l'importer (ou antislash)
+use PDO; // car PDO n'existe pas ds mon PDOManager dc l'importer (ou antislash) (on est ds un namespace dc PDO est à l'ext dc l'appeler !)
 use Config; // use les class qu'on veut utiliser
 
 //⚠️️⚠️️⚠️️ Singleton

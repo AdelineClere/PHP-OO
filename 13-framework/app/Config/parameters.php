@@ -6,7 +6,7 @@ $parameters = array(                // (= tablo multidimensionnel pr Q° sécuri
         'host'      => 'localhost',
         'dbname'    => 'boutique',
         'login'     => 'root',
-        'password'  =>  'root'
+        'password'  =>  ''
     ),
 );
 
