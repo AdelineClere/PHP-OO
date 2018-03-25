@@ -4,7 +4,7 @@
  
 function inclusion_automatique($nom_de_classe){
 
-	//Rq. : $a = newController\Membre\($nom_de_classe) { = tu explodes dès que tu trouves un \ ( on va chercher $.. qui se trouve ds classe Membre qui se trouve ds namepspace Controller)}
+	//Rq. : $a = newController\Membre\($nom_de_classe) { = tu explodes dès que tu trouves un \ ( on va chercher $.. qui se trouve ds classe Membre qui se trouve ds namespace Controller)}
 	
 	$tab = explode('\\',  $nom_de_classe);
 	$chemin_class = implode('/', $tab);

@@ -15,7 +15,7 @@ class B extends A
     public function calcul() {
         // objectif : faire en sorte que cette fct return 15
         // return 15;                         -> ça c'est ⚠️ REDÉFINITION 
-        // return $this -> calcul() + 5; $    -> this fait appel à la fct ds laquelle on est ===> ⚠️ RÉCURSIVITÉ
+        // return $this -> calcul() + 5;     -> this fait appel à la fct ds laquelle on est ===> ⚠️ RÉCURSIVITÉ
         // return self::calcul() + 5;         -> self:: fait appel à des élts statiq, pas le cas ici, et en + serait récursif
        
         // $a = new A; return $a -> calcul() + 5;   

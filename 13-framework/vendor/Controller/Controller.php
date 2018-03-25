@@ -4,7 +4,8 @@
 namespace Controller;
 
 use Model;      // pas besoin de use PDO car déjà ds namespace Model
-// Rq : ds require on importe tou / ds le use c'est pour le droit d'utiliser
+// Rq :⚠️️  ds require on importe tout / ds le use c'est pour le droit d'utiliser
+
 
 class Controller
 {
@@ -13,7 +14,7 @@ class Controller
     public function __construct() {
         $class = 'Model\\' . str_replace(array('Controller\\', 'Controller'), '', get_called_class()) . 'Model';
     
-        /* Ex. : si je suis ds Controller\ProduitController
+        /* ⚠️️ Ex. : si je suis ds Controller\ProduitController
            Je retire 'Controller\' et 'Controller', il reste 'Produit'
            J'ajoute 'Model\' au début et 'Model' à la fin...
            Il reste donc :
@@ -24,7 +25,7 @@ class Controller
            // J'instancie dc Model\ProduitModel et je stock l'objet ProduitModel ds $this -> model;
     }
    
-    public function getModel() {    // getModel retourne 1 objet ProduitModel
+    public function getModel() {    //⚠️️  getModel retourne 1 objet ProduitModel
         return $this -> model; 
     }
    
@@ -39,10 +40,11 @@ class Controller
         $path_layout = $dirView . $layout;
         // ../View/Layout.html
 
-        extract($params);   // Grâce à ce extract, les noms des indices ds mon array params (lg 26), 
+        extract($params);   // ⚠️️ Grâce à ce extract, les noms des indices ds mon array params (lg 26), 
                             // correspondront aux noms des variables utilisées dans mes vues.
 
         //--------------------------- Renvoyer ma poupée russe
+        
         ob_start();  // Enclenche ma temporisation de sortie. 
         // Càd que ce qui va suivre ne sera pas exécuté de suite mais temporisé (retenu en mémoire tampon)
         require $path_view; 

@@ -25,7 +25,7 @@ class C extends B
 
 //--------------
 
-$c = new C;     // 'déploiement de site' : en créant objet $c > met un objet de classe A grâce à __contruct()
+$c = new C;     //⚠️ 'déploiement de site' : en créant objet $c > met un objet de classe A grâce à __contruct()
 echo $c -> maVariable -> direBonjour(); // -> + -> = instance sans héritage
 // echo $objetA -> direBonjour(); car : $c -> maVariable est une instance de A
 

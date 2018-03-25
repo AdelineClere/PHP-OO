@@ -34,6 +34,7 @@ class ProduitModel extends Model
         $resultat = $this -> getDb() -> query($requete);
 
         $donnees = $resultat -> fetchAll(); // pas de class categ. dc je vais pas récup sous forme d'array ?
+                                            // > retourner un array de tous les pdts en OBJETs ?
 
         if(!$donnees) {
             return FALSE;

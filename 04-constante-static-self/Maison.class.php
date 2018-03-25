@@ -20,10 +20,10 @@ class Maison
 }
 
 //--------------------------
-
+// Avant instanciation puisque c'est dans class pas objet !
 echo Maison::$espaceTerrain . '<br/>';  //⚠️  static = appartient à la classe = ne nécessite pas 1 objet pour y avoir accès
 /* echo Maison::$nbPiece . '<br/>';
-    ERREUR : J'essaie d'accèder à une propriété private (certe static) dep l'ext. de la class. Dc :  */
+    ERREUR : J'essaie d'accèder à une propriété private (certes static) dep l'ext. de la class. Dc :  */
 echo Maison::getNbPiece() . '<br/>';
 echo Maison::HAUTEUR . '<br/>';
 

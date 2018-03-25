@@ -23,8 +23,9 @@ app/
 
 
 vendor/
-    autoload.php :  Permet d'🔸 inclure les bons fichiers au bon moment (lors des instanciations) et nous 
-                    permet d'🔸 éviter d'avoir à faire de nbrx require... Attention certains fichiers seront dans vendor/ et d'autres dans src/, notre autoload devra donc 🔸 savoir les distinguer...
+    autoload.php :  Permet d'🔸 inclure les bons fichiers au bon moment (lors des instanciations) et nous permet 
+                    d'🔸 éviter d'avoir à faire de nbrx require... Attention certains fichiers seront dans vendor/ 
+                    et d'autres dans src/,notre autoload devra donc 🔸 savoir les distinguer...
                     Rq. autoload fait partie du 🔸 coeur du framework (ex : symfonie = déjà codé)
 
 
@@ -33,14 +34,14 @@ src/
         Produit.php     -       Membre.php      -      Commande.php
         Ces classes contiennent 🔸 ttes les propriétés des entités de notre appli (et les getter et setter).
         On les appelle des 🔸 POPO 🔸  (Plain Old PHP Object).
-        On trv en objet => Il ns faut dc des classes, qui permettent de construire des objets pr chaq entité de notre site (⚠️️ = ce sont les plans de fabrication, nos moules !)
+        On trv en objet => Il ns faut dc des classes, qui permettent de construire des objets pr chaq entité 
+        de notre site (⚠️️ = ce sont les plans de fabrication, nos moules !)
 
 
 web/
     index.php   :   clé d'entrée de notre application (Symfony : app.php ou app_dev.php). 
                     C'est à partir de la que le site se déploie.
-                    Dans notre application, c'est ici que l'on 🔸 crée la session, faisons le 🔸 require
-                    de l'autoload et 🔸 instancierons la classe Application (interrupteur.)
+                    Dans notre application, c'est ici que l'on 🔸 crée la session, faisons le 🔸 require de l'autoload et 🔸 instancierons la classe Application (interrupteur.)
 
 vendor/
     Manager/
@@ -57,9 +58,10 @@ vendor/
 
 src/
     Model/
-        ProduitModel.php  : ⚠️️Ce fichier contiendra ttes les fct (requetes) liées à l'entité Produit (table produit)                       et 🔸demandera à Model.php (son parent) d'exécuter des requêtes.
-                            Lorsqu'une entité a besoin de 🔸requête(s) spécifiques qui ne peut ê génériq ds Model on la code ici.
-        Ex. : des jointures
+        ProduitModel.php  : ⚠️️ Ce fichier contiendra ttes les fct (requetes) liées à l'entité Produit (table produit) 
+                            et 🔸 demandera à Model.php (son parent) d'exécuter des requêtes génériq.
+                            Lorsqu'une entité a besoin de 🔸 requête(s) spécifiques qui ne peut ê génériq ds Model on la code ici.
+                            Ex. : des jointures
 
 
 vendor/
@@ -70,26 +72,26 @@ vendor/
 
 src/
     Controller/
-        ProduitController.php  :  Cette classe ⚠️️hérite du Controller, dc est capable de récup le model 
-                                  correspondant grâce à 🔸getMode() et permet de🔸 déclencher ttes les act° 
+        ProduitController.php  :  Cette classe ⚠️️ hérite du Controller, dc est capable de récup le model 
+                                  correspondant grâce à 🔸 getMode() et permet de🔸 déclencher ttes les act° 
                                   spécifiques à l'entité Produit.
-
 
     View/
         Produit/
-            boutique.php    :   Tout le code HTML de la pg Boutique :
+            boutique.php    :  ⚠️️ Tout le code HTML de la pg Boutique :
                                     1. retirer ts les traitements PHP
                                     2. Remettre header.inc.php et de footer.inc.php  
 
 
 web/   
-    ⚠️️Coller ttes les ressources CSS, JS, img, photo, bootstrap...
+    ⚠️️ Coller ttes les ressources CSS, JS, img, photo, bootstrap...
 
 
 src/
     View/
         layout.HTML : ⚠️️ Le layout représente la structure d'une page de notre site (Header/Nav/footer).
-                          Il peut y avoir plusieurs Layout si necess. (par ex. un pr les membres Lambda et un pr les admins...)    
+                          Il peut y avoir plusieurs Layout si necess. (par ex. un pr les membres 
+                          Lambda et un pr les admins...)    
 
 
 web/
@@ -97,15 +99,15 @@ web/
         1. text.text
         2. On l'ouvre sur l'éditeur
         3. Enregistrer sous 'all files' .htaccess
-        ⚠️️Le fichier .htaccess va donner l'ordre à notre serveur que ts les liens renvoients vers index.php.
-           De fait le lien  :🔸www.monsite.com/produit/afficheAll  
-                    donnera :  www.monsite.com/index.php/produit/afficheAll
+        ⚠️️ Le fichier .htaccess va donner l'ordre à notre serveur que ts les liens renvoient vers index.php.
+           De fait le lien  :🔸 www.monsite.com/produit/afficheAll  
+                    donnera :   www.monsite.com/index.php/produit/afficheAll
                     => on ne quittera jamais le fichier index.php
 
 
 vendor/
     Manager/
-        Application.php  :  Ce fichier lance notre appli ⚠️️c'est notre interrupteur.
+        Application.php  :  Ce fichier lance notre appli ⚠️️ c'est notre interrupteur.
                             Cette classe a pour mission de récup les données ds l'URL (le controller, 
                             l'action et l'arg), et d'instancier le bon controller, lancer la bonne méthode 
                             et y mettre l'argument.
@@ -115,12 +117,16 @@ vendor/
 
 
 
+----------------------------
+
 NAMESPACE (Choix subjectifs)
 
-⚠️️ ds l'espace GLOBAL  :   🔸parameters 🔸Config 🔸index 🔸autoload = pas dans namespaces :
+⚠️️ ds l'espace GLOBAL  :   🔸 parameters 🔸 Config 🔸 index 🔸 autoload = pas dans namespaces :
     -> pas vraiment besoin, car +- immuables
 
-⚠️️ dans NAMESPACES     :   🔸PDOManager 🔸Commande 🔸Membre 🔸Produit
+⚠️️ dans NAMESPACES     :   🔸 PDOManager 🔸 Commande 🔸 Membre 🔸 Produit
 
 
 
+⚠️️ ⚠️️ ⚠️️  explode :   Coupe une chaîne en segments : array
+⚠️️ ⚠️️ ⚠️️  implode :   Rassemble les éléments d'un tableau en une chaîne

@@ -29,7 +29,7 @@ class Model
     }
 
 
-     //⚠️️ je cherche le nom de la table qui doit ê interrogée :
+    //⚠️️ je cherche le nom de la table qui doit ê interrogée :
     public function getTableName() {   
         
         // get_called_class() = fct qui retourne class ds laquelle ns sommes :
@@ -37,7 +37,7 @@ class Model
         // puis -> Produit                                (grâce à str_replace)
         // puis -> en min > car table s'app. 'produit'    (grâce à strtolower)
         $table = strtolower(str_replace(array('Model\\', 'Model'), '', get_called_class()));
-        //je remplace Model\ et Model par rien (array just packe plusieurs remplace)
+        //⚠️️ je remplace Model\ (namspace) et Model par rien (array just packe plusieurs replace) > reste pdt ou cmd ou membre !
 
         return $table;
 
@@ -65,7 +65,7 @@ class Model
     // $resultat = $pdo -> query("SELECT * FROM produit");
 
          $resultat -> setFetchMode(PDO::FETCH_CLASS, 'Entity\\' . $this -> getTableName()); 
-        // FETCH_CLASS Entity etc   => donnera un tablo multidim (tablo ac des objets deds)
+        //⚠️️  FETCH_CLASS Entity etc   => donnera un tablo multidim ac les objets deds
 // avt de faire fetch on lui livre la class de maniere instanciée. Car la on veut recup objet qu'on a recup de la class, de bdd
         /*
         ⚠️️ setFetchMode() permet d'instancier un objet (ds notre cas un objet Entity\Produit), en prenant les résultats de notre requête et en affectant les valeurs dans les propriétés de mes objets.
@@ -77,19 +77,18 @@ class Model
         etc...
         */
                             // rappel des fetch///
-                                // // requete 1 resultat :
-                                // $resultat = $pdo -> query("SELECT * FROM employes WHERE id_employes = 350");
-                                //     $employes = $resultat -> fetch(PDO::FETCH_ASSOC);   => array asso   ()
+                                /*  requete 1 resultat :
+                                      $resultat = $pdo -> query("SELECT * FROM employes WHERE id_employes = 350");
+                                      $employes = $resultat -> fetch(PDO::FETCH_ASSOC);   => array asso   ()
 
-                                // // resuete plusieurs resultats :
-                                // $resultat = $pdo -> query("SELECT * FROM employes");
-
-                                // while($employes = $resultat -> fetch(PDO::FETCH_ASSOC)) {
-                                //     // faut faire une boucle sinon retourne que 1er !
-                                // }
+                                    requete plusieurs resultats :
+                                      $resultat = $pdo -> query("SELECT * FROM employes");
+                                      while($employes = $resultat -> fetch(PDO::FETCH_ASSOC)) {
+                                      faut faire une boucle sinon retourne que 1er !
+                                */
 
         // ac tablo multidim retourné ->
-         $donnees = $resultat -> fetchAll();     // > retourner un array de tous les pdts en OBJETs 
+         $donnees = $resultat -> fetchAll();     // > retourner un array de tous les pdts en OBJETs ?
 
         if(!$donnees) {
             return FALSE;

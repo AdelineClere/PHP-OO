@@ -14,7 +14,7 @@ class Autoload
         // require(__DIR__ . '/Manager/PDOManager.php')
 
         $tab = explode('\\', $className );  // 2 '\\' pr échapper l'antislash et dire oui c un caractère spécial
-        // dès que rencontre \ => coupe en array ( new / Controller / ProduitController...)
+        // ⚠️️ dès que rencontre \ => coupe en array ( new / Controller / ProduitController...)
         
             // si je suis ds le cadre d'un Manager ou pas => pas même chemin : VENDOR ou SRC
             if($tab[0] == 'Manager' || ($tab[0] == 'Model' && $tab[1] == 'Model') || ($tab[0] == 'Controller' && $tab[1] == 'Controller')) {  

@@ -10,7 +10,7 @@ final class Application
 //-----
 
 //  class Extension extends Application {}
-    // => ERREUR : impossible d'hériter d'une classe finale (on ne veut pas qu'elle le soit)
+    // => ERREUR :⚠️  impossible d'hériter d'une classe finale (on ne veut pas qu'elle le soit !)
 
 
 //-----
@@ -28,7 +28,7 @@ class Application2
 class Extension extends Application2
 {
     // public function run2() {
-    // ERREUR : impossible de redéfinir ou surcharger une fct final
+    // ERREUR :⚠️  impossible de redéfinir ou surcharger une fct final
     //}
 }
 
@@ -37,11 +37,11 @@ class Extension extends Application2
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
 
-    - Une classe finale ne peut PAS ÊTRE HERITEE
-    - Les méthodes d'une classe finale sont forcément finales par déf° car la classe ne pouvant ê héritée, 
-      les fct ne seront JAMAIS SURCHARGEES...
-    - Une classe finale PEUT Ê INSTANCIEE
+    - ⚠️ Une classe finale ne peut PAS ÊTRE HERITEE
+    - ⚠️ Les méthodes d'une classe finale sont forcément finales par déf° car la classe ne pouvant ê héritée, 
+         les fct ne seront JAMAIS SURCHARGEES...
+    - ⚠️ Une classe finale PEUT Ê INSTANCIEE
 
-    - Une méthode finale PEUT Ê présente ds une classe normale
-    - Une méthode finale ne peut PAS Ê SURCHARGEE NI REDEFINIE
+    - ⚠️ Une méthode finale PEUT Ê présente ds une classe normale
+    - ⚠️ Une méthode finale ne peut PAS Ê SURCHARGEE NI REDEFINIE
 */

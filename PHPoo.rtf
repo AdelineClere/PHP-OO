@@ -1,0 +1,228 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 DIN-Regular;\f1\fnil\fcharset0 SourceSansPro-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red164\green8\blue0;\red164\green8\blue0;
+\red38\green38\blue38;\red239\green239\blue239;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgenericrgb\c64314\c3137\c0;\csgenericrgb\c64314\c3137\c0;
+\cssrgb\c20000\c20000\c20000;\cssrgb\c94902\c94902\c94902;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19000\viewh27300\viewkind0
+\deftab720
+\pard\pardeftab720\sl336\slmult1\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+BASES PHPoo
+\b0 \
+En php tu apprends \'e0 lire et \'e9crire,\'a0en objet on apprend \'e0 faire un livre (en factoris\'e9, on apprendrait \'e0 faire une r\'e9daction) > on devient auteur.\'a0\
+\cf3 _____________________\cf0 \'a0\
+
+\b \cf3 FCT\'b0 MAGIQ
+\b0 \cf0 \
+\
+
+\b __construct
+\b0 () \{\} 		->\'a0 se lance ac instanciation (ex : attribuer un argt qd elle se lance,\
+
+\b __set
+\b0 ($nom, $val) \{\}  	->\'a0 pr s\'e9cur si propri\'e9t\'e9s st publiques, qd on tente d'affecter val \'e0 propri\'e9t\'e9 inexistente\
+
+\b __get
+\b0 ($nom, $val) \{\}  	->\'a0 si on essaye de r\'e9cup val \'e0 propri\'e9t\'e9 inexistente\
+
+\b __call
+\b0 () \{\} 			->\'a0 qd tente d'app. fct\'b0 inexist.\
+
+\b __callstatic
+\b0 () \{\} 		->\'a0 idem mais pr m\'e9thodes inexist.\
+
+\b __destruct
+\b0 () \{\} 		->\'a0 s'ex\'e9cute \'e0 la fin du script\
+
+\b __DIR__
+\b0  -> 			->\'a0 retourne le chemin du doss ds lequel on est\
+\'a0\
+\pard\pardeftab720\sl336\slmult1\partightenfactor0
+\cf0 Si visibilit\'e9 
+\b PRIVATE
+\b0  > 
+\b SETTER
+\b0  (affecter une val) + 
+\b GETTER
+\b0  (r\'e9cup\'e9rer val)\
+\
+\pard\pardeftab720\sl336\slmult1\partightenfactor0
+
+\b \cf0 PUBLIC / PRIVATE
+\b0  	->\'a0 	\'e0 objet =>\'a0 	$this ->  \'a0et. \'a0	$objet\'a0->\'a0 (int/ext)\
+
+\b STATIC / CONST
+\b0  	->\'a0 \'a0\'e0 class => 	self::  	et. \'a0	Class::\
+\'a0\
+
+\b SINGLETON
+\b0  ->\'a0 class instanciable qu'une seule fois\
+\'a0\
+class A extends B 					->\'a0 
+\b h\'e9ritage
+\b0  (transitif, pas multiple, poss. red\'e9finir\'a0fut h\'e9rit\'e9e..)\
+\{ ...$this\'a0-> maVariable = new A 		->\'a0 
+\b instance sans h\'e9ritage\'a0
+\b0 \'a0= \'a0\'a0__construct et\'a0r\'e9cup 
+\b OBJET de autre class
+\b0 \
+\'a0\
+return 
+\b parent::
+\b0 fct_de_A () \{\} 			->\'a0 
+\b surcharge
+\b0  : modifier des classes h\'e9rit\'e9es\
+\'a0\
+
+\b abstract
+\b0  class Joueur\'a0\
+\{ abstract public\'a0function\'a0\'eaMajeur(); 	->\'a0 
+\b oblig\'b0
+\b0  absolue pr h\'e9ritiers de 
+\b re-d\'e9clarer la fct\'b0
+\b0 \
+\'a0\
+
+\b final
+\b0  class Appli 					->\'a0 
+\b ne peut pas \'ea h\'e9rit\'e9e
+\b0  / jamais surcharg\'e9e ni red\'e9finie / peut \'ea instanci\'e9e\
+\{ \
+\'a0\
+
+\b Interface
+\b0 \'a0Mvt\{\} 					-> 
+\b \'b1 lexique
+\b0  \'e0 respecter / pas instanciable\
+class Avion 
+\b implements
+\b0  Mvt\
+\'a0\
+
+\b trait
+\b0 \'a0Panier \
+
+\b trait
+\b0  Membre\
+
+\b 	class
+\b0  Site\
+	\{ 
+\b use
+\b0  TPanier, TMembre;  -> class peut h\'e9riter d'1 seule\'a0class > mais peut 
+\b importer\'a0pas traits
+\b0 \
+\'a0\
+
+\b namespace
+\b0  Espace1 \{\}   -> esp. virtuels > instancier ac nom complet + d\'e9finir chemin ou instruct\'b0 'use' \
+\'a0\
+
+\b autoload
+\b0 \'a0    -> \
+
+\b spl_autoload_register();
+\b0  -> fct\'b0 (inclusion automatique) top qui 
+\b ex\'e9cute fct\'b0
+\b0  attribu\'e9es d\'e8s que serveur voit passer un '
+\b new
+\b0 '\
+\'a0\
+\'a0\cf4 _____________________\cf0 \'a0\
+
+\b \cf3 PDO
+\b0 \cf0 \
+
+\b -\'a0connexion ac mode warning  
+\b0 -> $pdo = new PDO('mysql:host=' . $parameters['host'] . ';dbname=' . $parameters['dbname'],  $parameters['login'], $parameters['password'], array(\'a0\
+ PDO::ATTR_ERRMODE =>\'a0 PDO::ERRMODE_WARNING,\
+ PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8' \
+\'a0\
+
+\b -\'a0connexion\'a0ac mode exception
+\b0  -> $pdo = new PDO('mysql:dbname=xxxxx;host=localhost', 'root', 'root', array( PDO::ATTR_ERRMODE =>\'a0 \'a0  PDO::ERRMODE_EXCEPTION\
+\'a0 
+\b Try
+\b0  \{\
+ // Marqueurs ?\
+ // Marqueurs : \
+\'a0 \}\
+\'a0 
+\b Catch (PDOException $e
+\b0 ) \{ 		->  attrape erreurs et les met ds $e\
+\'a0\
+\'a0 \}\
+\'a0\
+
+\b Query
+\b0  > 
+\b objet PDOStatement
+\b0  qui a des m\'e9thodes dt :\
+
+\b fetch
+\b0 (PDO::
+\b FETCH_ASSOC
+\b0 ) 		->  array associatif (1 par employ\'e9...) (boucle while n\'e9cess. pr voir tous)\
+
+\b fetch
+\b0 (PDO::
+\b FETCH_BOTH
+\b0 ) 		-> array qui index numeriqt + le nom des champs\
+
+\b fetch
+\b0 (PDO::
+\b FETCH_OBJ
+\b0 ) 			-> objet ac nom des champs de la class MAIS obj de STDClass ( \'e0 la vol\'e9e, dq vient d'aucune class)\
+\'a0\
+
+\b fetchAll						
+\b0 -> 
+\f1 \cf5 \cb6 \outl0\strokewidth0 \strokec5 tablo contenant toutes les lignes du jeu d'enregistrements
+\f0 \cf0 \cb1 \outl0\strokewidth0 \
+
+\b setFetchMode
+\b0 (PDO::
+\b FETCH_CLASS
+\b0 , -> table multidimensional ac objets deds\
+ instancier un obj. en prenant r\'e9sult de requ\'eate et affecter les val ds les propri\'e9t\'e9s des obj.\
+car ds boutiq on veut garder l'objet r\'e9cup de bdd\
+\'a0\
+\'a0\
+\'a0\
+__________________________________\
+
+\b BOUTIQ 
+\b0  PHP motifs :\
+!! Changer lg 57 de boutique.php > URL image ! (car ds BDD = mettre que nom !!) :\
+<img src=" <?= URL . 'photo/' . $produit['photo'] ?>" alt="" class="img-responsive tofProduit">\
+Dans fiche_produit aussi > concat\'e9ner URL ac le dossier 'photo' (lg 36)\
+\'a0\
+\pard\pardeftab720\sl336\slmult1\partightenfactor0
+\cf0 __________________________________\
+\pard\pardeftab720\sl336\slmult1\partightenfactor0
+
+\b \cf0 BOUTIQ PHPoo
+\b0 \
+MVC = Models Views\'a0Controllers\
+C => Tour de contr\'f4le\
+\'a0-> quasi 1 controleur par table ds la BDD\
+-> et chq ont des choses en commun => g\'e9r\'e9es par Controller.php dont ils vont h\'e9riter\
+En\
+MVC on quitte plus l'index\
+\'a0\
+Rq. :\
+img = tout ce qui participe au design du site\
+photo = tt ce qui vient de l'ext dans upload\
+\'a0\
+NAMESPACE (Choix subjectifs)\
+- parameters, Config, index, autoload sont ds l'espace global = pas dans namespaces :\
+\'a0 \'a0 -> pas vraiment besoin, car +- immuables\
+- dans 
+\b namespace : PDOManager, Commande, Membre, Produit
+\b0 \
+\'a0\
+- Dans Model que des requ\'eates SQL quasi\
+\
+- pour modifier > Controllers}

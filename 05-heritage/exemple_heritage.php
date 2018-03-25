@@ -35,7 +35,7 @@ echo $admin -> accesBackOffice() . '<br/>';
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
  * 
- *  Ds notre site, un admin c'est un membre ac une focntionnalité suppl. : Accès au BackOffice.
+ *  Ds notre site, un admin c'est un membre ac une fonctionnalité suppl. : Accès au BackOffice.
  *  ⚠️ Dc naturel que la class admin hérite (extends) de la classe Membre et qu'on ne réécrive pas tt le code 2 fois.
  * 
  * 

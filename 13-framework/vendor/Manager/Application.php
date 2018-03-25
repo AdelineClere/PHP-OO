@@ -11,21 +11,21 @@ final class Application
 
     public function __construct() {  // On scan l'URL
 
-        $tab = explode('/', $_SERVER['REQUEST_URI']);  // 'REQUEST_URI retourne ts les '/' qu'elle trouve ds URL => et coupe pr fzire array
+        $tab = explode('/', $_SERVER['REQUEST_URI']);  // 'REQUEST_URI retourne ts les '/' qu'elle trouve ds URL => et coupe pr faire array
 
         // echo '<pre>';
         // print_r ($tab); // retourne tt ce qu'on a ds url
         // echo '</pre>';
-    
+    ⚠️️ 
                         /*  Array
                             (
                                 [0] => 
                                 [1] => PHP%20OO
                                 [2] => 13-framework
                                 [3] => web
-                                [4] => membre
+                                [4] => produit
                                 [5] => affiche
-                            ))  */
+                            ))  */              //⚠️️ ⚠️️ ⚠️️  manque le [6] => argument ???
 
         if(isset($tab[4]) && !empty($tab[4]) && file_exists(__DIR__ . '/../src/Controller/' . $tab[4] . 'Controller.php')) {
             //s'il y a un controller xxxxx ds l'url et que le fichier xxxxxController.php existe

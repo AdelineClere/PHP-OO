@@ -1,6 +1,6 @@
 <?php
 
-// require 'A.class.php';  // () pas obligatoires ! car à la fois une fct et une instruction
+// require 'A.class.php';   // () pas obligatoires ! car à la fois une fct et une instruction
 // require 'B.class.php';
 // require 'C.class.php';
 // require 'D.class.php';

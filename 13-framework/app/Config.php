@@ -12,7 +12,7 @@ class Config
              et je stocke tous les parameters de mon application dans la propriété $parameters   */
     }
 
-    public function getParametersConnect() {  //⚠️️ just pour récup partie connexion (à la palce d'un get)
+    public function getParametersConnect() {  //⚠️️ just pour récup partie connexion (à la place d'un get)
         return $this -> parameters['connect'];
         // Cette fct retourne seult les infos de connex° qui me seront utiles au moment de la connex° à la BDD
     }

@@ -3,15 +3,15 @@
 // -> appel.php
 
 
-namespace General;      // ⚠️ ne marche plus si on met un namespace genéral ici ! (PHP +- la gde armoire)
+namespace General;      // ⚠️ ne marche plus si on met un namespace genéral ici ! (PHP +- la gde armoire, ou poupées russes)
 //⚠️  alors =>   
 use PDO;
 use Espace1;
 use Espace2;
-            // autre méthode : antislash pour sortir des esp : $c = new \Espace1\A;   (comme ::/ )
-            // \ => pour namespaces
+            // autre méthode : antislash pour sortir des esp : $c = new \Espace1\A;   
 
-require('espace1.php');     // dans l'absolu c'est un copier/coller
+            
+require('espace1.php');
 require('espace2.php');
 
 $c = new Espace1\A;         // du coup obligé d'appeler class par/dans son espace virtuel ⚠️ 

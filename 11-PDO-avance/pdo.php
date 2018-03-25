@@ -4,7 +4,7 @@
 // $pdo = new PDO('mysql:host=localhost;dbname=entreprise', 'root', ''); 
 
 
-// connexion ac mode erreur warning :
+//⚠️ connexion ac mode erreur warning :
 // $pdo = new PDO('mysql:dbname=entreprise;host=localhost', 'root', '', array(
   // PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING   // permet d'afficher erreurs sQL = bien (:si on voit pas > site piratable)
   // ));
