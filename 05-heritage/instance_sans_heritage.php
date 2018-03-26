@@ -34,7 +34,7 @@ echo $c -> maVariable -> direBonjour(); // -> + -> = instance sans héritage
 
 /*****************⚠️ COMMENTAIRES ⚠️*******************
  * 
- *  ⚠️ la fct contruct() (méthode magique) se lance au moment de l'instantciation...
+ *  ⚠️ la fct contruct() (méthode magique) se lance au moment de l'instanciation...
  * 
  *      On a un objet A à l'intérieur d'un objet C
  *      L'intérêt d'avoir une INSTANCE SANS HERITAGE ⚠️ = RÉCUPÉRER UN OBJET DANS LA PROPRIÉTÉ D'UNE CLASSE) 

@@ -1,0 +1,45 @@
+
+
+                <!-- <div class="row"> // AFFICHER photo + prix + lien envoi vers fiche pdt-->
+                <div class="col-md-6 col-md-offset-3"> 
+                    <div class="panel-default border">  <!--cf Bootstrap/Components/Panels-->
+                        <div class="panel-heading text-center">
+                            <h2> <?= $produit -> getTitre() ?> </h2>     <!-- Guillemets?=  > remplace un echo-->
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-center">
+                                <img src="<?= $url ?>photo/<?= $produit -> getPhoto() ?>" alt="" class="img-responsive tofProduit">  
+                                <!-- ⚠️⚠️⚠️ Aff tof -->
+                            </p>   
+                            <p class="text-center">Catégorie : <?= $produit -> getCategorie() ?> <br></p>
+                            <p class="text-center">Couleur : <?= $produit -> getCouleur() ?> <br>
+                            <p class="text-center">Taille : <?= $produit -> getTaille() ?> <br>
+                            <p class="text-center">Description : <?= $produit -> getDescription() ?> <br>
+                            <p class="text-center">Prix : <?= $produit -> getPrix() ?> € <br></p>    
+                        
+                            <!-- ⚠️ Voir stock -->
+                            <?php  if($produit -> getStock() > 0) : ?>
+                            
+                                <em>Nombre de produit(s) disponible(s) : <?= $produit -> getStock() ?> </em><hr>
+                                <form method="post" action="panier.php">
+                                    <input type="hidden" name="id_produit" value="<?= $produit -> getId_produit() ?>"> 
+                                    <!-- ⚠️ input caché pr que PANIER sache de quel pdt il s'agit -->
+                                    <label for="quantite">Quantité</label>
+                                    <select class="form-control" id="quantite" name="quantite"> <!-- ⚠️ selecteur de Qtt -->
+                                        <?php for($i = 1; $i <= $produit -> getStock() && $i <= 5; $i++) : ?> 
+                                                <option><?= $i ?></option>";
+                                        <?php endfor; ?>
+                                    </select><br>
+                                    <!-- btn ajout panier-->
+                                    <input type="submit" name="ajout_panier" class="btn btn-primary col-md-12" value="Ajouter au panier">   
+                                </form>
+
+                                <?php else: ?>
+                                    <div class="alert alert-danger text-center">Rupture de stock !!</div>  <!-- RUPTURE stock-->
+                                <?php endif; ?>
+
+                        </div> <!-- panel-body -->
+                    </div> <!-- panel-default border -->
+                </div> <!-- class row --> 
+
+           

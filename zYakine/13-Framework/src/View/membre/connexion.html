@@ -1,0 +1,16 @@
+<!-- Réaliser un formaulaire HTML de connexion (champs pseudo, mot de passe et le bouton submit) -->
+
+<?= $erreur ?>
+<form method="post" action="" class="col-md-8 col-md-offset-2">
+	<h1 class="alert alert-info text-center">Connexion</h1>
+
+  <div class="form-group">
+    <label for="pseudo">Pseudo</label>
+    <input type="text" class="form-control" id="pseudo" name="pseudo" placeholder="pseudo">
+  </div>
+  <div class="form-group">
+    <label for="mdp">Mot de passe</label>
+    <input type="text" class="form-control" id="mdp" name="mdp" placeholder="mot de passe">
+  </div>
+<button type="submit" class="btn btn-primary col-md-12">Connexion</button>
+</form>
